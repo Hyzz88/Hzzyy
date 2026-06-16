@@ -1,0 +1,120 @@
+body {
+    background: #f4f6f9;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* ===== HEADER ===== */
+.admin-header {
+    height: 64px;
+    background: linear-gradient(135deg, #1f2937, #111827);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+}
+
+.admin-header a {
+    color: #facc15;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ===== SIDEBAR ===== */
+.admin-sidebar {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 230px;
+    height: calc(100vh - 64px);
+    background: #111827;
+    padding-top: 20px;
+}
+
+.admin-sidebar a {
+    display: block;
+    padding: 12px 20px;
+    color: #d1d5db;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.admin-sidebar a i {
+    margin-right: 8px;
+}
+
+.admin-sidebar a:hover,
+.admin-sidebar a.active {
+    background: #1f2937;
+    color: #fff;
+}
+
+/* ===== CONTENT ===== */
+.admin-content {
+    margin-left: 230px;
+    padding: 30px;
+}
+
+/* ===== PAGE TITLE ===== */
+.page-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+/* ===== CARD ===== */
+.card {
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* ===== TABLE ===== */
+.table {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.table thead {
+    background: #1f2937;
+    color: #fff;
+}
+
+.table tbody tr {
+    transition: 0.25s;
+}
+
+.table tbody tr:hover {
+    background: #f1f5f9;
+    transform: scale(1.003);
+}
+
+.table img {
+    transition: transform 0.3s;
+}
+
+.table img:hover {
+    transform: scale(1.15);
+}
+
+/* ===== BUTTON ===== */
+.btn {
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    border: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    border: none;
+}
+
+/* ===== BADGE ===== */
+.badge {
+    border-radius: 999px;
+    padding: 6px 12px;
+}

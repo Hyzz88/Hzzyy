@@ -1,0 +1,54 @@
+/* Giao diện trang Auth (Đăng ký/Đăng nhập) */
+.auth-page-container {
+    background-color: #f8f9fa;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.auth-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    border: none;
+    overflow: hidden;
+}
+
+.auth-header {
+    padding: 40px 30px 10px;
+}
+
+.auth-header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+}
+
+.auth-body {
+    padding: 30px 40px 40px;
+}
+
+.form-control {
+    border-radius: 10px;
+    background-color: #fdfdfd;
+    border: 1.5px solid #eee;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 10px rgba(218, 37, 29, 0.1);
+    border-color: #da251d;
+}
+
+.btn-danger {
+    background-color: #da251d;
+    border: none;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.btn-danger:hover {
+    background-color: #b01a14;
+    transform: translateY(-2px);
+}

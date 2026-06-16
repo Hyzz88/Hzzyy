@@ -1,0 +1,204 @@
+/* =======================================================
+   1. ĐỊNH NGHĨA BIẾN & CƠ BẢN
+   ======================================================= */
+:root {
+    --v-red: #da251d;
+    --v-gold: #ffcd00;
+    --v-dark: #1a1a1a;
+    --v-light: #f8f8f8;
+    --slider-height: 600px; /* Chiều cao chuẩn cho máy tính */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--v-dark);
+    overflow-x: hidden;
+}
+
+/* =======================================================
+   2. HEADER & NAVIGATION
+   ======================================================= */
+.top-bar {
+    background: var(--v-light);
+    font-size: 0.85rem;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    color: var(--v-red) !important;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--v-red) !important;
+}
+
+/* Khu vực Login trong Header */
+.header-login {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 1px solid #ddd;
+}
+
+.header-login input {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    height: 32px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 130px;
+}
+
+.btn-login-header {
+    background: var(--v-red);
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn-login-header:hover {
+    background: #b31d16;
+    transform: translateY(-2px);
+}
+
+/* =======================================================
+   3. SLIDER QUẢNG CÁO (FIX LỖI CẮT ẢNH)
+   ======================================================= */
+.hero-slider {
+    height: var(--slider-height);
+    background-color: #000;
+}
+
+.carousel-item {
+    height: var(--slider-height);
+    position: relative;
+    background-size: cover;
+    
+    /* CHỈNH CÂN ĐỐI: 
+       - 50% là căn giữa theo chiều ngang.
+       - 20% là ưu tiên lấy phần trên của ảnh (tránh mất đầu người mẫu).
+       - Nếu ảnh vẫn lệch, hãy thử đổi thành 'center center' */
+    background-position: 50% 20%; 
+    background-repeat: no-repeat;
+}
+
+/* Lớp phủ tối nhẹ để chữ nổi bật hơn */
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+.carousel-caption {
+    z-index: 10;
+    bottom: 20%; /* Đẩy khối chữ lên cao hơn một chút */
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.carousel-caption h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* =======================================================
+   4. SẢN PHẨM & CATE CARD
+   ======================================================= */
+.cate-card {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.cate-card img {
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    width: 100%;
+    object-fit: cover;
+}
+
+.cate-card:hover img {
+    transform: scale(1.1);
+}
+
+/* =======================================================
+   5. DROPDOWN SUBMENU
+   ======================================================= */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-left: .1rem;
+    display: none;
+    border-radius: 0;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+}
+
+/* =======================================================
+   6. RESPONSIVE (DÀNH CHO ĐIỆN THOẠI)
+   ======================================================= */
+@media (max-width: 992px) {
+    :root { --slider-height: 450px; }
+    .carousel-caption h1 { font-size: 2.2rem; }
+    .header-login { border-left: none; margin-left: 0; padding-left: 0; padding-top: 15px; }
+}
+
+@media (max-width: 768px) {
+    :root { --slider-height: 350px; }
+    
+    /* Trên mobile ưu tiên lấy tâm ảnh */
+    .carousel-item {
+        background-position: center center;
+    }
+    
+    .carousel-caption {
+        bottom: 10%;
+    }
+    
+    .carousel-caption h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* =======================================================
+   7. FOOTER
+   ======================================================= */
+footer {
+    background-color: var(--v-dark);
+    color: white;
+    padding: 50px 0 20px;
+}
+
+footer a {
+    color: #bbb;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: var(--v-gold);
+}
